@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <style>
+            .div1{
+                width: 400px;
+                height: 400px;
+                
+                border: 5px solid red;
+                margin: 100px auto;
+                overflow: scroll;
+            }
+            .div2{
+                width: 100px;
+                height: 100px;
+                margin: 20px 20px;
+                cursor: all-scroll;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">DragAble</h1>
+        <hr>
+        <div class="div1">
+            <div class="div2"></div>
+        </div>
+        <script>
+            $("document").ready(function(){
+                $(".div2").draggable({
+                    axis:"y",
+                    containment:"parent",
+                });
+            });
+        </script>
+        
+    </body>
+    
+</html>

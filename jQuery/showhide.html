@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ShowHide</title>
+        <script src="js/jquery.js"></script>
+        <style>
+            button{
+                width: 100%;
+                padding: 20px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                background: black;
+                color: white;
+                border: none;
+                font-size: 40px;
+            }
+            h1{
+                font-size: 200px;
+                float: left;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Hide</button>
+        <h1 id="w">W</h1>
+        <h1 id="a">A</h1>
+        <h1 id="p">P</h1>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#w").toggle(1000,function(){
+                        $("#a").toggle(1000,function(){
+                            $("#p").toggle(1000,function(){
+                                if($("button").html()=== "Hide")
+                                {
+                                    $("button").html("Show");
+                                }
+                                    else{
+                                        $("button").html("Hide");
+                                    }
+                                
+                            });
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
